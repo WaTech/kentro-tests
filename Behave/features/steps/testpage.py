@@ -11,12 +11,13 @@ from bs4 import BeautifulSoup
 @when('user opens kentro test page')
 def step_impl(context):
     test_page = os.environ['TEST_PAGE']
-    context.request = requests.get(test_page, verify=False).text
+    br = context.browser
+    br.get(test_page)
+    time.sleep(5)
+    context.page_body = br.find_element_by_css_selector('body').text
 
 
 @then('page body includes "jabberwookiee"')
 def step_impl(context):
-    new_soup = BeautifulSoup(context.request, "html.parser")
-    context.page_body = new_soup.find('body').text
     site_contains = "jabberwookiee"
     assert site_contains in context.page_body
