@@ -8,7 +8,7 @@ from behave import *
 from bs4 import BeautifulSoup
 
 
-@when('user opens test page')
+@when('user opens kentro test page')
 def step_impl(context):
     test_page = os.environ['TEST_PAGE']
     context.request = requests.get(test_page, verify=False).text
