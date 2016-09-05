@@ -22,6 +22,7 @@ sudo ln -s --force /home/ubuntu/bin/phantomjs-2.0.1-linux-x86_64-dynamic /usr/lo
 # npm i express express-hbs moment underscore chalk pa11y-reporter-1.0-json
 
 # Install python setuptools
+sudo apt-get install python-dev
 wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
 
 # Install python modules
