@@ -17,9 +17,8 @@ chmod a+x /home/ubuntu/bin/phantomjs-2.0.1-linux-x86_64-dynamic
 sudo ln -s --force /home/ubuntu/bin/phantomjs-2.0.1-linux-x86_64-dynamic /usr/local/bin/phantomjs
 
 # Install pa11y 
-# NOT RIGHT NOW
-# npm i pa11y@git+https://github.com/RobLoach/pa11y.git -g
-# npm i express express-hbs moment underscore chalk pa11y-reporter-1.0-json
+npm i pa11y@git+https://github.com/RobLoach/pa11y.git -g
+npm i express express-hbs moment underscore chalk pa11y-reporter-1.0-json
 
 # Install python setuptools
 sudo apt-get install python-dev

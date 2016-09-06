@@ -1,0 +1,5 @@
+[behave]
+junit=TRUE
+junit_directory=$CIRCLE_ARTIFACTS/Behave-Results
+show_source=TRUE
+verbose=TRUE
