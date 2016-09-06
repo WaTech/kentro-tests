@@ -16,17 +16,13 @@ from selenium.webdriver.common.by import By
 @when('user opens kentro test page')
 def step_impl(context):
     test_page = os.environ['TEST_PAGE']
-    #br = context.browser
-    browser.get(test_page)
+    br = context.browser
+    br.get(test_page)
     time.sleep(5)
-    context.page_body = browser.find_element_by_css_selector('body').text
+    context.page_body = br.find_element_by_tag_name('body').text
 
 
 @then('page body includes "jabberwookiee"')
 def step_impl(context):
     site_contains = "jabberwookiee"
-    # assert site_contains in context.page_body
-    WebDriverWait(context.page_body, 10).until(
-        EC.text_to_be_present_in_element(
-            (By.TAG_NAME, "body"), "jabberwookiee")
-    )
+    assert site_contains in context.page_body
